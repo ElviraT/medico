@@ -2,12 +2,21 @@
 
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/lang/{language}', function ($language) {
+    if (!in_array($language, ['en', 'es', 'fr'])) {
+        abort(400);
+    }
+    Session::put('language', $language);
+    App::setLocale(Session::get('language'));
+    return redirect()->back();
+})->name('language');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

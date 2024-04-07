@@ -401,13 +401,8 @@
 
                 <li class="menu-title"><span>Main</span></li>
                 <li class="submenu">
-                    <a href="#"><i class="fe fe-home"></i> <span> Dashboard</span> <span
-                            class="menu-arrow"></span></a>
-                    <ul style="display: none;">
-                        <li><a class="active"
-                                href="https://kanakku.dreamstechnologies.com/laravel/template/public">Admin
-                                Dashboard</a></li>
-                    </ul>
+                    <a href="{{ route('dashboard') }}"><i class="fe fe-home"></i> <span> {{ 'Dashboard' }}</span>
+                        <span class="menu-arrow"></span></a>
                 </li>
 
 

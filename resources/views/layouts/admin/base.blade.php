@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg"
-    data-sidebar-image="none">
+<html lang="{{ str_replace('_', '-', App::getLocale()) }}" data-layout="vertical" data-topbar="light" data-sidebar="light"
+    data-sidebar-size="lg" data-sidebar-image="none">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
@@ -33,6 +33,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/plugins/scrollbar/scroll.min.css">
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
     <script src="assets/js/layout.js"></script>
 </head>
 
